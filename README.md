@@ -22,7 +22,7 @@ Se quiser criar o cluster nuvem Kubernetes com Terraform é opcional.
 * Ter instalado a CLI do Azure.
 
 #### Como Executar:::
-## Provisionando o Cluster na Azure com Terraform:
+##### Provisionando o Cluster na Azure com Terraform:
 * 1º - Efetue o clone do projeto com o seguinte comando: git clone https://github.com/danieliImpacta/Kubernetes.git;
 * 2º - Navegue até o diretório clonado;
 * 3º - Logar na conta azure: az login -u <email> -p <senha>;
@@ -31,7 +31,7 @@ Se quiser criar o cluster nuvem Kubernetes com Terraform é opcional.
 * 6º - A seguir digite terraform apply -auto-approve para criar a infraestrutura no Azure.
 * 7º - Na conta da Azure verifique se o resource group e o cluster foram criados respectivamente, 'ResourceGroup' e 'KubernetesCluster'.
 
-## Realizando deploy no Cluster criado:
+##### Realizando deploy no Cluster criado:
 * 1º - No terminal, conecte-se ao cluster criado na azure: az aks get-credentials --resource-group ResourceGroup --name KubernetesCluster;
 * 2º - Suba os deployments criados a partir dos arquivos yaml: kubectl apply -f .\deployments\;
 * 3º - Suba os serviços criados a partir dos arquivos yaml: kubectl apply -f .\services\;
